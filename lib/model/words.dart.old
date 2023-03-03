@@ -1,0 +1,59 @@
+final String wordsmeaning = 'words';
+
+class WordsFields {
+  static final List<String> values = [
+    /// Add all fields
+    id, Eword, Ameaning
+  ];
+
+  static final String id = '_id';
+  static final String Eword = 'Eword';
+  static final String Ameaning = 'Ameaning';
+
+
+}
+
+class word {
+  final int? id;
+  final String Eword;
+  final String Ameaning;
+
+
+  const word({
+    this.id,
+    required this.Eword,
+    required this.Ameaning,
+  });
+
+  word copy({
+    int? id,
+    String? Eword,
+    String? Ameaning,
+
+  }) =>
+      word(
+        id: id ?? this.id,
+        Eword: Eword ?? this.Eword,
+        Ameaning: Ameaning ?? this.Ameaning,
+
+
+
+      );
+
+  static word fromJson(Map<String, Object?> json) => word(
+    id: json[WordsFields.id] as int?,
+    Eword: json[WordsFields.Eword] as String,
+    Ameaning: json[WordsFields.Ameaning] as String,
+
+
+
+  );
+
+  Map<String, Object?> toJson() => {
+    WordsFields.id: id,
+    WordsFields.Eword: Eword,
+    WordsFields.Ameaning: Ameaning,
+
+
+  };
+}

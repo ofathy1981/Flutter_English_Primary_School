@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/osama/primary_secondery_english/BuildConfig.java
+ com.osama.primary_secondery_english.BuildConfig
